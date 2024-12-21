@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ISS Tracker</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="header-container">
+    <h1>Is the ISS close to
+        <span class="animated-text">Berlin</span> now?</h1>
+</div>
+
+<% if (message) { %>
+    <p><%= message %></p>
+<% } else { %>
+    <p>Click the button to find out!</p>
+<% } %>
+
+<div class="form-container">
+    <form action="/check" method="POST">
+        <button type="submit" id="checkButton" name="check" class="animated-button">CHECK</button>
+    </form>
+</div>
+</body>
+</html>
+
